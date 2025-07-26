@@ -56,12 +56,3 @@ This project combines data engineering, machine learning, and visualization into
 - **Data Engineering (Upstream)**: Pub/Sub, Dataflow, Cloud Functions
 - **Modeling**: BigQuery ML, Python (via Colab)
 
----
-
-## Getting Started
-
-```bash
-git clone https://github.com/BrandyHuang/Youtube_Video_Analysis.git
-cd kpi-dashboard-website
-npm install
-npm run dev
