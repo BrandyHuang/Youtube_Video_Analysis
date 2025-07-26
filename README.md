@@ -72,9 +72,9 @@ Users can explore:
 ### Model Outcomes
 
 | Prediction Target         | Best Model        | R² Score | Notes                                  |
-|--------------------------|-------------------|----------|----------------------------------------|
-| Subscriber Growth Rate   | Lasso / Ridge     | ~0.89    | Strong linear pattern                  |
-| View Count               | Linear Regression | ~0.51    | Less predictable, nonlinear dynamics   |
+|--------------------------|------------------|----------|----------------------------------------|
+| Subscriber Growth Rate   | Linear Regression| ~0.89    | Strong linear pattern                  |
+| View Count               | Lasso Regression | ~0.51    | Less predictable, nonlinear dynamics   |
 
 - **Clustering Analysis** revealed three distinct video types:
   - **Cluster 2**: High-view, low-frequency uploads (e.g. MrBeast-type viral hits)
@@ -86,7 +86,7 @@ Users can explore:
 ## Insights & Takeaways
 
 ### Key Engagement Insights
-- **Likes > Comments** as engagement indicators
+- **Likes, views, subscribers** as engagement indicators
 - **Video length is not a strong predictor** of performance
 - Strong feedback loop: more subscribers → more views → higher engagement
 
