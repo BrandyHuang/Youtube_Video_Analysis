@@ -30,7 +30,6 @@ This project combines data engineering, machine learning, and visualization into
 - Cluster videos by performance profiles
 - Visualize trends and key drivers of engagement
 
----
 
 ## Methodology
 
