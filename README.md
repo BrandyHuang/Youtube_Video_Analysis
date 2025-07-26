@@ -64,7 +64,7 @@ These normalized metrics help us compare videos and channels of different sizes 
 ### Sample Dashboard Output
 
 [Watch Dashboard Demo](website.mp4) 
-[![Watch the demo](dashboard.png)](demo.mp4)
+[![Watch the demo](dashboard.png)](website.mp4)
 
 Users can explore:
 - Top viewed channels and their engagement trends
