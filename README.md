@@ -18,8 +18,8 @@ This project combines data engineering, machine learning, and visualization into
 
 ### YouTube KPI Dashboard
 - View key performance indicators including:
-  - **Views**, **Likes**, **Comments**, **Subscribers**
-  - **Engagement per Upload**, **Subscriber Growth Rate**, etc.
+  - **subscriber_growth**, **upload_frequency**, **views_per_upload**, **subscriber_per_upload**,
+  - **engagement_per_upload**.
 - Filter by time range and categories
 - Visual comparison across top-performing vs. underperforming content
 - Live data integration and customizable layout
