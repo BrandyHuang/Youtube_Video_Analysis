@@ -63,7 +63,7 @@ These normalized metrics help us compare videos and channels of different sizes 
 
 ### Sample Dashboard Output
 
-![Dashboard](dashboard1.png)
+![Dashboard](dashboard.png)
 ![AI Chatbot](dashboard2.png)
 Users can explore:
 - Top viewed channels and their engagement trends
