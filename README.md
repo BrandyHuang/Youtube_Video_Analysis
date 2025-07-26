@@ -12,47 +12,96 @@ YouTube has become a dominant platform for content consumption, yet creators and
 
 This project combines data engineering, machine learning, and visualization into one seamless experience using a modern web interface.
 
----
+## Deliverables & Features
 
-## Features
-
-### YouTube KPI Dashboard
-- View key performance indicators including:
-  - **subscriber_growth**, **upload_frequency**, **views_per_upload**, **subscriber_per_upload**,
-  - **engagement_per_upload**.
-- Filter by time range and categories
-- Visual comparison across top-performing vs. underperforming content
-- Live data integration and customizable layout
+### Interactive Dashboard
+- Key KPIs: Views, Likes, Comments, Engagement Rate, Subscriber Growth
+- Time-range filtering and category breakdowns
+- Mobile-friendly layout with smooth animations
+- Real-time updates via backend integration
 
 ### Embedded Chatbot
-- Ask questions like:  
-  _“What’s the best-performing video this month?”_  
-  _“Which brand had the highest engagement rate?”_
-- Automatically fetch insights from your uploaded/streamed YouTube dataset
-- Built-in typing animation and clean interface
+- Ask questions about top videos, brands, or trends
+- Provides instant natural language insights
+- Can be enhanced with LLM APIs for richer interaction
 
-### Machine Learning Insights
-- Linear, Ridge, and Lasso regression models to predict:
-  - **Subscriber Growth Rate**
-  - **View Count**
-- K-Means clustering to segment:
-  - **High-performing Powerhouses**
-  - **Standard Performers**
-  - **Rapidly Growing Channels**
-
-### Content Strategy Insights
-- Real insights from YouTube metadata (title, tags, published time)
-- Track views-per-upload, engagement-per-upload, and upload frequency
-- Normalize performance across different-size channels for fair comparison
+### Machine Learning and Statistical Models
+- Predict subscriber growth using regression
+- Cluster videos by performance profiles
+- Visualize trends and key drivers of engagement
 
 ---
 
-## Tech Stack
+## Methodology
 
-- **Frontend**: React + Vite
-- **Styling**: Tailwind CSS
-- **Visualization**: Recharts
-- **AI Chatbot**: Custom logic (can integrate with LLM APIs)
-- **Data Engineering (Upstream)**: Pub/Sub, Dataflow, Cloud Functions
-- **Modeling**: BigQuery ML, Python (via Colab)
+### Data Pipeline
+- **YouTube Data API** to stream metadata and performance metrics
+- **GCP Stack**: Pub/Sub → Cloud Functions → Dataflow → BigQuery
+- Regularly updated BigQuery tables feed both analysis and dashboard
+
+### Modeling & Analysis
+- **Regression Models** (Linear, Lasso, Ridge):
+  - Target variables: `log_subscriber_growth_rate`, `log_view_count`
+  - Objective: quantify impact of tags, titles, frequency, and length
+- **Clustering (KMeans)**:
+  - Group videos based on derived KPIs
+  - Discover high performers and fast-growing newcomers
+
+### Feature Engineering
+Derived metrics include:
+- `views_per_upload`
+- `engagement_per_upload`
+- `subscriber_growth_rate`
+- `upload_frequency`
+- `subscriber_per_upload`
+
+These normalized metrics help us compare videos and channels of different sizes fairly.
+
+---
+
+## Results
+
+### Sample Dashboard Output
+
+![Dashboard Screenshot](website.png) <!-- replace with actual link or remove if not applicable -->
+
+Users can explore:
+- Top viewed channels and their engagement trends
+- Category-wise performance summaries
+- Individual channel performance across time
+
+### Model Outcomes
+
+| Prediction Target         | Best Model        | R² Score | Notes                                  |
+|--------------------------|-------------------|----------|----------------------------------------|
+| Subscriber Growth Rate   | Lasso / Ridge     | ~0.89    | Strong linear pattern                  |
+| View Count               | Linear Regression | ~0.51    | Less predictable, nonlinear dynamics   |
+
+- **Clustering Analysis** revealed three distinct video types:
+  - **Cluster 2**: High-view, low-frequency uploads (e.g. MrBeast-type viral hits)
+  - **Cluster 1**: Newer, fast-growing channels with frequent uploads
+  - **Cluster 0**: Stable performers with long-form content
+
+---
+
+## Insights & Takeaways
+
+### Key Engagement Insights
+- **Likes > Comments** as engagement indicators
+- **Video length is not a strong predictor** of performance
+- Strong feedback loop: more subscribers → more views → higher engagement
+
+### Content Strategy Recommendations
+- Focus on increasing **engagement per upload**
+- Target consistent uploading and optimize **titles**, **tags**, and **thumbnails**
+- Monitor normalized metrics like `subscriber_growth_rate` for clearer performance evaluation
+
+### Market Applications
+- **For Creators**: Know what to improve and where to invest
+- **For Brands**: Benchmark sponsored content, optimize campaign timing
+- **For Analysts**: A flexible framework for scalable content intelligence
+
+---
+
+
 
